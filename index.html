@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .about-container {
+            background-color: #e0f7fa;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+        header {
+            background: url('background.png') center center/cover no-repeat;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        header nav {
+            margin-top: 20px;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.4em;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        header nav ul li a:hover {
+            background-color: #00bcd4;
+            transform: translateY(-3px);
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2 {
+            border-bottom: 2px solid #00bcd4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .findings img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 5px solid #00bcd4;
+        }
+        .projects-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">New York City Crime/Population Correlation Project</a></li>
+                <li><a href="#boat-sales">Boat Sales Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-container container" id="about">
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! My name is Aaron Rathore, and I am pursuing a Bachelor of Science in Computer Science at the University of Manitoba. I am passionate about creating innovative applications and websites, and I have a strong interest in data analysis. As a lifelong learner, I constantly seek new challenges and opportunities to grow.
+
+                I combine my technical skills in software development, data analysis, and web design to create meaningful and user-friendly solutions. My projects reflect my dedication to excellence and my drive to make a positive impact through technology.
+                </p>
+        </section>
+    </div>
+
+    <div class="container" id="projects">
+        <section>
+            <h2 class="projects-title">My Projects</h2>
+
+            <section id="nyc-crime-unemployment">
+                <h3>New York City Crime/Population Correlation Project</h3>
+                <section>
+                    <h4>About the Project</h4>
+                    <p>I embarked on a project to investigate whether there was a correlation between the crime rate, population, and unemployment rate in New York City, driven by a keen curiosity about these potential relationships. To achieve this, I dedicated significant time to collecting and analyzing relevant data from public databases. My approach involved utilizing a suite of advanced tools, including SQL for efficient data extraction from various databases, Excel for meticulous data cleaning and organization, Tableau for insightful data visualization, and Python for robust statistical analysis.</p>
+                    <p>I utilized a dataset from the NYC government page that encompasses data on the "Seven Major Felony Offenses." This dataset tracks the number of felonies committed in categories such as robbery, burglary, grand larceny, felony assault, and other significant crimes.</p>
+                    <p>In SQL, I executed complex queries to gather comprehensive datasets that spanned multiple years. With Excel, I meticulously cleaned and organized the data to ensure accuracy and consistency. Using Tableau, I created dynamic visualizations that revealed trends and patterns, making it easier to interpret the data. Python played a crucial role in performing advanced statistical analyses, such as calculating year-over-year changes and identifying correlations.</p>
+                    <p>One of the initial challenges I faced was determining a standard measurement for comparing the different variables effectively. After careful consideration and iterative analysis, I developed a consistent methodology that allowed for meaningful comparisons between the crime rate, population changes, and unemployment rates. This comprehensive approach not only provided valuable insights but also enhanced my understanding of the intricate dynamics at play. During the process, I also experimented and challenged my capabilities by calculating "felonies per 100k", where I took the total crime rate, and used the population from that specific year to calculate the felonies committed per 100k for that specific year.</p>
+                </section>
+
+                <section class="Findings">
+                    <h4>Findings</h4>
+                    <img src="pic.png" alt="Findings Image 1"  style="max-width: 100%; height: auto; object-fit: contain;">
+                    <img src="100k.png" alt="Findings Image 2" style="max-width: 100%; height: auto; object-fit: contain;">
+                    <img src="data.png" alt="Findings Image 3"  style="max-width: 100%; height: auto; object-fit: contain;">
+                </section>
+
+                <section>
+                    <h4>Conclusion</h4>
+                    <p>Based on the data analysis, changes in population and total major felonies show no consistent correlation. However, from the graph, we observe a steady increase in both the change in total felonies and the change in population from 2020 to 2022. This project provided me with invaluable insights and learning opportunities, allowing me to overcome numerous challenges and push my analytical skills to new heights.</p>
+                    <p>Sources:</p>
+                    <p><a href="https://www.macrotrends.net/global-metrics/cities/23083/new-york-city/population#" target="_blank">Macrotrends NYC Population Data</a></p>
+                    <p><a href="https://www.nyc.gov/html/nypd/downloads/pdf/analysis_and_planning/citywide_historical_seven_major_felony_offenses_2000-2012.pdf" target="_blank">NYC Major Felony Offenses</a></p>
+                    <p><a href="https://www.statista.com/statistics/190697/unemployment-rate-in-new-york-since-1992/" target="_blank">Statista NYC Unemployment Rate</a></p>
+                </section>
+            </section>
+        </section>
+    </div>
+
+    <div class="container" id="boat-sales">
+        <section>
+            <h2 class="projects-title">Boat Sales Project</h2>
+
+            <section>
+                <h3>About the Project</h3>
+                <p>I wanted to challenge myself and push my data analysis skills to the next level, so I took on a project involving a complex dataset from a yacht and boat sales website based in Europe. Using Python, I performed extensive data cleaning and made various calculations to extract meaningful insights.</p>
+                <p>For this project, I utilized Python for data analysis and visualization, as well as assisting me with data cleansing. I employed libraries such as Pandas for data manipulation, Tableau to create stunnning and interractive visualizations, and I also used NumPy for handling numerical calculations .</p>
+                <p>Initially, it was challenging to cleanse the data, as much of it was difficult to extract due to inconsistencies and complex formatting. However, I enjoyed the process of calculating the conditions of the boats purchased and found the project highly rewarding. This experience significantly upgraded my skills, surpassing the capabilities I demonstrated in my previous data analysis projects.</p>
+            </section>
+
+            <section class="Findings">
+                <h4>Findings</h4>
+                <div style="overflow-x: auto;">
+                    <img src="DASHBOARDBOAT.png" alt="Findings Image 1" style="max-width: 100%; height: auto; object-fit: contain;">
+                </div>
+            </section>
+            
+            <section>
+                <h4>Conclusion</h4>
+                <p>Based on the data analysis, I concluded which countries buy the most boats from the shop, the most popular boats purchased, as well as what condition the boats are purchased This project was very interesting and fun, and it helped me to strengthen my skills in data analysis and grew my interest in this field.</p>
+                <p>Sources:</p>
+                <p><a href="https://www.kaggle.com/datasets/karthikbhandary2/boat-sales/data" target="_blank">Boat Sales</a></p>
+
+                <p>INTERACTIVE DASHBOARD: </p>
+                <p><a href="https://public.tableau.com/views/boatproject/Dashboard1?:language=en-US&:sid=8850C609D5DD4E05B7E8D48767833513-0:0&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Interractive Dashboard</a></p>
+            </section>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Aaron Rathore. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
